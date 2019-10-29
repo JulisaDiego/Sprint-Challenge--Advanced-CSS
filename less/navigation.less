@@ -1,1 +1,31 @@
 // Navigation code here
+
+nav {
+    display: flex;
+    font-size: 1.9rem;
+    // border: 1px solid black;
+    align-items: center;
+    flex-direction: column;
+    background-color: @nav-bg;
+    min-width: 70%;
+    margin: auto;
+    color: @nav-font;
+    padding-bottom: 2.0rem;
+
+    li {
+       display: inline;
+       padding-left: 2.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: @nav-font;
+    }
+}
+
+.logo {
+    font-size: 4.5rem;
+    font-weight: 600; 
+    font-family: 'Russo One', sans-serif;
+    padding: 3.0rem 0;
+}

@@ -11,6 +11,10 @@
     p {
       padding:0 15px;
     }
+
+    .header-img {
+      max-width: 100%;
+    }
   
   }
 
@@ -24,6 +28,19 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+
+    @media @mobile {
+      img:not(:first-child) {
+       display: none; 
+      }
+
+      @media @mobile {
+        .blast {
+          width: 100%;
+        }
+      }
+      
     }
   }
 
@@ -55,21 +72,54 @@
 
       p {
         margin-bottom: 26px;
+      
       }
 
       .btn {
+         transition-duration: 0.4s;
+        .btn-style(white, @btn-bg-color);
+        border: 1px solid @btn-bg-color;
+
+        @media @mobile {
+          width: 100%;
+          padding: 2.0rem 0;
+          margin: auto;
+        }
+        
       }
+        .btn:hover {
+          background-color: @white;
+          color: @btn-bg-color;
+        }
+
+      
+      @media @mobile {
+        width: 100%;
+        margin-top: 10%;
+      }
+     
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
       
+      
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
+      @media @mobile {
+        width: 100%;
+      }
+
     }
+
+    @media @mobile {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
   }
 }// home
